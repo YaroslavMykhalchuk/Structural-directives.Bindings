@@ -1,0 +1,7 @@
+<h1>Завдання 1. Прив’язки</h1>
+<div>
+    <input type="text" [(ngModel)]="number" (blur)="splitNumber()">
+</div>
+<div class="digit-inputs">
+    <input *ngFor="let digit of digits" type="text" [value]="digit">
+</div>

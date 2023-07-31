@@ -1,0 +1,17 @@
+<h1>Завдання 2. Прив’язки</h1>
+<div class="calculator">
+    <label>
+        <input type="number" [(ngModel)]="number1">
+        <select [(ngModel)]="operator">
+          <option value="plus">+</option>
+          <option value="minus">-</option>
+          <option value="multiply">*</option>
+          <option value="divide">/</option>
+        </select>
+    </label>
+    <input type="number" [(ngModel)]="number2">
+    <button (click)="calculate()">Обрахувати</button>
+  </div>
+  <div>
+    <p>Результат: {{ result }}</p>
+  </div>

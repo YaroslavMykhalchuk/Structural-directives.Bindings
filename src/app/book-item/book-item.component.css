@@ -1,0 +1,34 @@
+h1, p {
+    margin: 0;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.img {
+  height: 240px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.img, .title, .author, .description, .rating {
+  margin-bottom: 5px; 
+}
+
+.rating {
+    font-style: italic;
+}

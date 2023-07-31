@@ -1,0 +1,18 @@
+<h1>Завдання1. Структурні директиви</h1>
+<section class="books">
+  <div *ngFor="let book of books" class="item">
+    <img *ngIf="book?.cover; else noCover" src='{{book.cover}}' alt="Обкладинка" class="img">
+    <h1 class="title">{{book.title}}</h1>
+    <p class="author">{{book.author}}</p>
+    <p class="description">{{book.description}}</p>
+    <div *ngIf="book?.rating; else noRating" class="rating">
+      <p>Рейтинг: {{book.rating}} </p>
+    </div>
+    <ng-template #noRating>
+      <p>Рейтинг: відсутній</p>
+    </ng-template>
+    <ng-template #noCover>
+      <div alt="no Cover" [ngStyle]="{'height.px': book.cover ? 'auto' : 80}"></div>
+    </ng-template>  
+  </div>
+</section>
